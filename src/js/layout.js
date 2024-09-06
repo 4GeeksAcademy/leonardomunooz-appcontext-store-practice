@@ -6,7 +6,7 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
-
+import Todos from './views/Todos.jsx'
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -23,8 +23,10 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/todos" element={<Todos />} />
+						{/* <Route path="/products" element={<Products />} /> */}
+						{/* <Route path="/product/:id" element={<ProductDetail />} /> */}
+						{/* <Route path="/contact" element={<Contact />} /> */}
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
